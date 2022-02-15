@@ -5,6 +5,7 @@ export const NavbarStyle = styled.div`
   width: 255px;
   min-height: 100vh;
   height: 100%;
+  position: fixed;
 
   .navbar__logo {
     height: 100px;
