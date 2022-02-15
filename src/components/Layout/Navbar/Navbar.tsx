@@ -52,8 +52,8 @@ const Navbar: React.FC = () => {
 
           <li>
             <Link
-              className={pathname == "/my-profile" ? "active" : ""}
-              to="/my-profile"
+              className={pathname == "/profile" ? "active" : ""}
+              to="/profile"
             >
               <span className="active-dash"></span>
               <FaUserAlt />

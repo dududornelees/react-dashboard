@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     <HeaderStyle>
       <div className="header__current-page">{pathname}</div>
 
-      <div className="header__profile">Profle</div>
+      <div className="header__profile">Profile</div>
     </HeaderStyle>
   );
 };
