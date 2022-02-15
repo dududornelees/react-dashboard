@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 // Types
 type ContextValue = {
   Login: (email: string, password: string) => void;
+  Logout: () => void;
 };
 
 const DefaultValues = {
   Login: () => {},
+  Logout: () => {},
 };
 
 export const AuthContext = createContext<ContextValue>(DefaultValues);
@@ -20,8 +22,14 @@ export const AuthContextProvider: React.FC = ({ children }) => {
     navigate("/home");
   };
 
+  const Logout = () => {
+    navigate("/login");
+  };
+
   return (
-    <AuthContext.Provider value={{ Login }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ Login, Logout }}>
+      {children}
+    </AuthContext.Provider>
   );
 };
 

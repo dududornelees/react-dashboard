@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useAuthContext } from "providers/AuthContext";
 
 // Styles
 import { NavbarStyle } from "./styles";
@@ -7,9 +8,11 @@ import { NavbarStyle } from "./styles";
 import { AiFillHome } from "react-icons/ai";
 import { FaUsers, FaUserAlt } from "react-icons/fa";
 import { AiFillSchedule } from "react-icons/ai";
+import { FiLogOut } from "react-icons/fi";
 
 const Navbar: React.FC = () => {
   const { pathname } = useLocation();
+  const { Logout } = useAuthContext();
 
   return (
     <NavbarStyle>
@@ -59,6 +62,18 @@ const Navbar: React.FC = () => {
               <FaUserAlt />
               Meu perfil
             </Link>
+          </li>
+
+          <li>
+            <button
+              type="button"
+              onClick={() => {
+                Logout();
+              }}
+            >
+              <FiLogOut />
+              Sair
+            </button>
           </li>
         </ul>
       </div>
