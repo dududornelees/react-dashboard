@@ -17,7 +17,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
 
   const Login = (email: string, password: string) => {
     console.log(`Login: ${email} e ${password}`);
-    navigate("/");
+    navigate("/home");
   };
 
   return (
