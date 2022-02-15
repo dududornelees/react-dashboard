@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
   }
