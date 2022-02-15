@@ -1,12 +1,12 @@
 import Routes from "routes/Routes";
 
 // Styles
-import { ThemeProvider } from "styled-components";
-import { DefaultTheme } from "./styles/Themes";
+import { ThemeProvider } from "@mui/material";
+import { defaultTheme } from "./styles/Themes";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={DefaultTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <Routes />
     </ThemeProvider>
   );

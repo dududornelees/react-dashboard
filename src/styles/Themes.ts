@@ -1,19 +1,11 @@
-export const DefaultTheme = {
-  title: "DefaultTheme",
+import { createTheme } from "@mui/material";
 
-  colors: {
-    primary: "#3751FF",
-    secondary: "#363740",
-    background: "#F7F8FC",
-    text: "#333333",
+export const defaultTheme = createTheme({
+  typography: {
+    fontSize: 12,
   },
 
-  fontSize: {
-    small: "14px",
-    medium: "16px",
-    large: "18px",
+  shape: {
+    borderRadius: 6,
   },
-
-  transition: "all .2s",
-  borderRadius: "8px",
-};
+});

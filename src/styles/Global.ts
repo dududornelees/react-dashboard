@@ -10,9 +10,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: sans-serif;
-    background-color: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
+    font-family: "Roboto", sans-serif;
+    background-color: #363740;
+    color: #242424;
   }
 
   #root {min-height: 100vh};
