@@ -1,9 +1,15 @@
+import Routes from "./routes/Routes";
+
 // Styles
 import { ThemeProvider } from "styled-components";
 import { DefaultTheme } from "./styles/Themes";
 
-const App = () => {
-  return <ThemeProvider theme={DefaultTheme}>App!</ThemeProvider>;
+const App: React.FC = () => {
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <Routes />
+    </ThemeProvider>
+  );
 };
 
 export default App;
