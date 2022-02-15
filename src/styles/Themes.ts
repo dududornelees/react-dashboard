@@ -15,4 +15,5 @@ export const DefaultTheme = {
   },
 
   transition: "all .2s",
+  borderRadius: "8px",
 };

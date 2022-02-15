@@ -1,4 +1,4 @@
-import Routes from "./routes/Routes";
+import Routes from "routes/Routes";
 
 // Styles
 import { ThemeProvider } from "styled-components";
