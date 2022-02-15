@@ -1,7 +1,14 @@
+import React, { useState } from "react";
+import { useAuthContext } from "providers/AuthContext";
+
 // Styles
 import { LoginStyle } from "./styles";
 
 const Login: React.FC = () => {
+  const { Login } = useAuthContext();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <LoginStyle>
       <div className="login__container">
@@ -22,12 +29,34 @@ const Login: React.FC = () => {
         <div className="login__form">
           <form>
             <label htmlFor="email">EMAIL</label>
-            <input name="email" type="text" placeholder="Endereço de email" />
+            <input
+              name="email"
+              type="text"
+              placeholder="Endereço de email"
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setEmail(e.target.value);
+              }}
+            />
 
             <label htmlFor="password">SENHA</label>
-            <input type="password" placeholder="Senha" />
+            <input
+              type="password"
+              placeholder="Senha"
+              value={password}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setPassword(e.target.value);
+              }}
+            />
 
-            <button type="button">Entrar</button>
+            <button
+              type="button"
+              onClick={() => {
+                Login(email, password);
+              }}
+            >
+              Entrar
+            </button>
           </form>
         </div>
       </div>

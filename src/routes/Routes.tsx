@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
+import { AuthContextProvider } from "providers/AuthContext";
 
 // Styles
 import { GlobalStyle } from "styles/Global";
@@ -11,9 +12,11 @@ const Routes: React.FC = () => {
     <BrowserRouter>
       <GlobalStyle />
 
-      <Switch>
-        <Route path="/login" element={<Login />} />
-      </Switch>
+      <AuthContextProvider>
+        <Switch>
+          <Route path="/login" element={<Login />} />
+        </Switch>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 };
