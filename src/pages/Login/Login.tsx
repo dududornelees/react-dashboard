@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Paper, TextField, Button } from "@mui/material";
+import { useAuthContext } from "providers/AuthContext";
 
 // Styles
 import { LoginStyle } from "./styles";
 
 const Login: React.FC = () => {
+  const { Login } = useAuthContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -51,7 +53,14 @@ const Login: React.FC = () => {
               }}
             />
 
-            <Button variant="contained" type="button" fullWidth>
+            <Button
+              variant="contained"
+              type="button"
+              fullWidth
+              onClick={() => {
+                Login(email, password);
+              }}
+            >
               Entrar
             </Button>
           </form>
